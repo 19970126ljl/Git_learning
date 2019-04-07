@@ -101,6 +101,23 @@ _https://用户名.github.io/仓库名_
 
 2.&emsp; 在settings页面，点击 **GitHub Pages** 内部的按钮
 
+# 将本地项目上传至GitHub
+
+1.&emsp;git init
+
+2.&emsp;git add . 或者 git add 文件夹
+
+3.&emsp;git commit -m "注释"
+
+4.&emsp;(若没有SHH KEY) ```ssh-keygen -t rsa -C "youremail@example.com"``` &emsp;用户目录下会出现id_rsa和id_rsa.pub.后者是公钥，添加到github的settings中的SSH and GPG keys 中
+
+5.&emsp;GitHub上新建仓库，```git remote add origin git@github.com:smfx1314/test2.git``` 建立关联
+
+6.&emsp;```git push -u origin master```将内容推送到远程仓库（若远程仓库不为空则先 ```git pull --rebase origin master```,然后再 ```git push origin master```）
+
+7.&emsp;以后再次从本地仓库上传内容只需 ```git push origin master```
+
+
 
 
 
