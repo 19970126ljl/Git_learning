@@ -42,7 +42,7 @@ git init
 
 3.&emsp;**git status**：查看文件状态
 
-4.&emsp;**git commit -m '描述'**：提交文件到git仓库
+4.&emsp;**git commit -m '描述' [filename]**：提交文件到git仓库
 
 5.&emsp;**git status**：查看文件状态
 
@@ -129,6 +129,9 @@ _https://用户名.github.io/仓库名_
 
 
 
+# 版本前进后退
 
+git log 查看日志
+git log --pretty=oneline 或 git reflog
 
 
