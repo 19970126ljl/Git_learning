@@ -134,4 +134,16 @@ _https://用户名.github.io/仓库名_
 git log 查看日志
 git log --pretty=oneline 或 git reflog
 
+\# 基于索引值的操作
+git reset --hard 局部索引值
 
+\# 使用^符号,几个^符号就后退几步
+git reset --hard HEAD^
+\#使用~符号接数字，表示后退几步
+git reset --hard HEAD~7
+
+\# git reset --hard --soft --mixed 三个参数对比
+
+--soft仅在本地库移动HEAD指针
+--mixed在本地库移动HEAD指针,重置暂存区
+--hard在本地库移动HEAD指针，重置暂存区和工作区
