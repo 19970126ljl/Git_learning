@@ -8,6 +8,16 @@ git config --global user.name 'username'
 
 git config --global user.email '邮箱'
 
+(以上--global表示设置全局用户，--local设置本地用户,本地用户信息在.git/config下查看，全局用户信息在系统用户家目录下.gitconfig查看)
+\#\# 查看本地用户信息
+cat .git/config
+
+\#\# 查看系统用户信息
+cd \#进入家目录
+cat .gitconfig
+
+
+
 3.&emsp;查看配置信息
 
 git config --list
