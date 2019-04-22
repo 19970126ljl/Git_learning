@@ -204,7 +204,12 @@ git clone [远程库的地址]
 - 输入被邀请者的邮箱
 - 点击copy invite link 发送给用户
 
-# pull操作
-pull相当于fetch 和 merge
-git fetch [远程仓库地址的别名] [远程分支名]
-git merge [远程仓库地址别名/远程分支名]
+# pull操作  
+pull相当于fetch 和 merge  
+git fetch [远程仓库地址的别名] [远程分支名]  
+\#查看fetch下来的文件  
+git checkout origin/master    
+\#切换回master  
+git checkout master   
+\#合并  
+git merge [远程仓库地址别名/远程分支名]  
