@@ -173,3 +173,6 @@ git checkout [分支名]
 \# 切换分支
 - 切换到接受修改的分支上 git checkout [分支名]
 - 执行merge操作 git merge [有心内容的分支名]
+
+\# 解决冲突
+
