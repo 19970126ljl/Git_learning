@@ -213,3 +213,6 @@ git checkout origin/master
 git checkout master   
 \#合并  
 git merge [远程仓库地址别名/远程分支名]  
+
+\#拉取加合并  
+git pull origin master  
