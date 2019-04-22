@@ -147,3 +147,25 @@ git reset --hard HEAD~7
 --soft仅在本地库移动HEAD指针
 --mixed在本地库移动HEAD指针,重置暂存区
 --hard在本地库移动HEAD指针，重置暂存区和工作区
+
+
+# 比较文件差异
+git diff [文件名] \#将工作区的文件和暂存区的文件比较
+git diff [本地库中的历史版本] [文件名] \#将工作区中的文件和本地历史库记录比较
+\#不带文件名比较多个符号
+
+# 创建分支
+
+master hot_fix feature_a feature_b ...
+
+\#查看分支 
+git branch -v
+
+\# 创建分支
+git branch [分支名]
+
+\#查看分支
+git branch -v
+
+\# 切换分支
+git checkout [分支名]
