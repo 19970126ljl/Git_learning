@@ -183,3 +183,11 @@ git checkout [分支名]
 - git add [文件名]
 - git commit -m "日志信息" (不能带文件名)
 
+# 远程仓库操作
+\#查看远程仓库信息
+git remote -v
+\#添加远程仓库信息
+git remote add origin [地址] (orign为别名)
+\#推送到远程仓库
+git push origin [分支名]
+
