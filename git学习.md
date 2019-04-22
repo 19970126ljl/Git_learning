@@ -203,3 +203,8 @@ git clone [远程库的地址]
 - 点击左边collaborators
 - 输入被邀请者的邮箱
 - 点击copy invite link 发送给用户
+
+# pull操作
+pull相当于fetch 和 merge
+git fetch [远程仓库地址的别名] [远程分支名]
+git merge [远程仓库地址别名/远程分支名]
