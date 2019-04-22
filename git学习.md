@@ -129,65 +129,77 @@ _https://用户名.github.io/仓库名_
 
 
 
-# 版本前进后退
+# 版本前进后退  
 
-git log 查看日志
-git log --pretty=oneline 或 git reflog
+git log 查看日志  
+git log --pretty=oneline 或 git reflog  
 
-\# 基于索引值的操作
-git reset --hard 局部索引值
+\# 基于索引值的操作  
+git reset --hard 局部索引值  
 
-\# 使用^符号,几个^符号就后退几步
-git reset --hard HEAD^
-\#使用~符号接数字，表示后退几步
-git reset --hard HEAD~7
+\# 使用^符号,几个^符号就后退几步  
+git reset --hard HEAD^  
+\#使用~符号接数字，表示后退几步  
+git reset --hard HEAD~7  
 
-\# git reset --hard --soft --mixed 三个参数对比
+\# git reset --hard --soft --mixed 三个参数对比  
+  
+--soft仅在本地库移动HEAD指针  
+--mixed在本地库移动HEAD指针,重置暂存区  
+--hard在本地库移动HEAD指针，重置暂存区和工作区  
 
---soft仅在本地库移动HEAD指针
---mixed在本地库移动HEAD指针,重置暂存区
---hard在本地库移动HEAD指针，重置暂存区和工作区
 
+# 比较文件差异  
+git diff [文件名] \#将工作区的文件和暂存区的文件比较  
+git diff [本地库中的历史版本] [文件名] \#将工作区中的文件和本地历史库记录比较  
+\#不带文件名比较多个符号  
 
-# 比较文件差异
-git diff [文件名] \#将工作区的文件和暂存区的文件比较
-git diff [本地库中的历史版本] [文件名] \#将工作区中的文件和本地历史库记录比较
-\#不带文件名比较多个符号
+# 创建分支  
 
-# 创建分支
+master hot_fix feature_a feature_b ...  
 
-master hot_fix feature_a feature_b ...
+\#查看分支   
+git branch -v  
 
-\#查看分支 
-git branch -v
+\# 创建分支  
+git branch [分支名]  
 
-\# 创建分支
-git branch [分支名]
+\#查看分支  
+git branch -v  
 
-\#查看分支
-git branch -v
-
-\# 切换分支
-git checkout [分支名]
-
-\# 切换分支
-- 切换到接受修改的分支上 git checkout [分支名]
-- 执行merge操作 git merge [有心内容的分支名]
+\# 切换分支  
+git checkout [分支名]  
+  
+\# 切换分支  
+- 切换到接受修改的分支上 git checkout [分支名]  
+- 执行merge操作 git merge [有心内容的分支名]  
 
 # 解决冲突
 
-\# 冲突的表现 <<<<<< 与 ======等特殊符号
-\#冲突解决
-- 编辑文件删除符号
-- 把文件修改到满意的程度
-- git add [文件名]
-- git commit -m "日志信息" (不能带文件名)
+\# 冲突的表现 <<<<<< 与 ======等特殊符号  
+\#冲突解决  
+- 编辑文件删除符号  
+- 把文件修改到满意的程度  
+- git add [文件名]  
+- git commit -m "日志信息" (不能带文件名)  
 
 # 远程仓库操作
-\#查看远程仓库信息
-git remote -v
-\#添加远程仓库信息
-git remote add origin [地址] (orign为别名)
-\#推送到远程仓库
-git push origin [分支名]
+\#查看远程仓库信息  
+git remote -v  
+\#添加远程仓库信息  
+git remote add origin [地址] (orign为别名)  
+\#推送到远程仓库  
+git push [别名] [分支名]  
 
+\#git clone 克隆
+git clone [远程库的地址]
+- 完整地把远程库克隆到本地
+- 创建origin远程地址别名
+- 初始化本地库
+
+
+# 邀请合作者
+- 进入仓库点击setting
+- 点击左边collaborators
+- 输入被邀请者的邮箱
+- 点击copy invite link 发送给用户
