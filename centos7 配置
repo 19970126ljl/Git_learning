@@ -1,0 +1,24 @@
+## 隐藏任务栏和顶栏  
+sudo vi /usr/share/gnome-shell/theme/gnome-classic.css  
+/* TOP BAR */处height改为0
+
+sudo rm -rf /usr/share/gnome-shell/extensions/window-list@gnome-shell-extensions.gcampax.github.com  
+alt+F2 输入r
+
+## 安装chrome  
+sudo vi /etc/yum.repos.d/google-chrome.repo  
+
+输入：  
+[google-chrome] 
+
+name=google-chrome 
+
+baseurl=http://dl.google.com/linux/chrome/rpm/stable/$basearch 
+
+enabled=1
+
+gpgcheck=1 
+
+gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+
+保存退出后  yum -y install google-chrome-stable --nogpgcheck
